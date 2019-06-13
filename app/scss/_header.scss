@@ -92,25 +92,60 @@ $header-min-menu: 70px;
 	li{
 		display: inline-block;
 		margin-right: 30px;
+		transition: all 0.3s ease;
+		&:hover{
+			color: $color-2;
+		}
 	}
 }
 .header-middle{
 	background-image: url('../img/bg/bg-header-middle.jpg');
 	background-size: cover;
+	color: white;
 }
 .header-middle-content{
 	align-items: center;
 	display: flex;
+
 	height: $header-middle-height;
 }
+.header-info{
+	.icm{
+		padding-right: 15px;
+		font-size: 18px;
+		color: $color-2;
+	}
+	a{
+		vertical-align: middle;
+	}
+	small.color-2{
+    margin-top: -20px;
+    display: table;
+    padding-left: 33px;
+    padding-bottom: 3px;
+	}
+	big{
+		font-size: em(20);
+	}
+	&.header-email{
+		margin-left: auto;
+	}
 
-
-
+}
 .header-logo{
 	img{
 		width: 220px;
 	}
 }
+.header-bottom{
+	background-color: $color-1;
+	color: white;
+	.header-bottom-content{
+		height: $header-bottom-height;
+	}
+}
+
+
 
 .header-scroll{
 	.header-top{
@@ -178,7 +213,7 @@ $header-min-menu: 70px;
 	height: 100%;
 	font-weight: bold;
 	width: 70%;
-	text-transform: uppercase;
+	font-size: em(14);
 	nav{
 		white-space: nowrap;
 		height: 100%;
@@ -199,17 +234,17 @@ $header-min-menu: 70px;
 			& > a{
 				height: 100%;
 				display: block;
-				padding: 10px 10px;
+				padding: 10px 20px;
 				position: relative;
 				display: flex;
     		align-items: center;
 			}
 			&.active{
-				color: $color-1;
+				color: $color-2;
 			}
 			&:hover{
 				a{
-					color: $color-1;	
+					background-image: $gradient-1;
 				}
 				.sub-menu-1{
 					transform: matrix(1,0,0,1,0,-30);
@@ -260,12 +295,12 @@ ul[class*="sub-menu"]{
 		padding: 0 15px;
 		transition: all 0.3s ease;
 		background: linear-gradient(to left, #424958, #424958);
+
 		&:not(:last-child){
 			border-bottom: 1px solid rgba(black, 0.1);
 		}
 		&:hover{
 			color: white;
-			background: linear-gradient(to left, $color-1, $color-2);
 			.sub-menu-2{
 				opacity: 1;
 				transform: none;transform: unset; 
