@@ -180,10 +180,10 @@
 				initialIndex: 0,
 				friction: 1,
 				selectedAttraction: 1,
-				prevNextButtons: false, //костыль с переключателями
+				prevNextButtons: true,
 				draggable: false,
 				wrapAround: true,
-				pageDots: true,
+				pageDots: false,
 				contain: false,
 				percentPosition: true,
 				cellSelector: 'figure',
@@ -193,24 +193,9 @@
 
 			$(".bnr-carousel .carousel-items").append("<div class='container-arrows'></div>").find(".container-arrows").append($(".bnr-carousel .carousel-items .flickity-prev-next-button"))
 
-			$(".bnr-carousel .container-arrows").append('<button class="flickity-prev-next-button previous" type="button" aria-label="previous"><svg viewBox="0 0 100 100"><path d="M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z" class="arrow"></path></svg></button><button class="flickity-prev-next-button next" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>');
+			//$(".bnr-carousel .container-arrows").append('<button class="flickity-prev-next-button previous" type="button" aria-label="previous"><svg viewBox="0 0 100 100"><path d="M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z" class="arrow"></path></svg></button><button class="flickity-prev-next-button next" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>');
 
-			var btnNext = bnrCarousel.find(".flickity-prev-next-button.next");
-			var btnPrev = bnrCarousel.find(".flickity-prev-next-button.previous");
 
-			btnNext.on("click", bnrCarousel, function(e, s) {
-				var currentSlide = bnrCarousel.find(".is-selected");
-				currentSlide.addClass("ended");
-				setTimeout(function(){
-					currentSlide.removeClass("ended");
-					e.data.flickity("next", true);
-				}, 400);
-				console.log(e, s);
-			});
-
-			btnPrev.on("click", bnrCarousel, function(e) {
-				e.data.flickity("previous", true);
-			});
 		}
 
 		if ($(".carousel-article").length >= 0) {

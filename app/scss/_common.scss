@@ -12,7 +12,7 @@ $color-5: #65a328 !default;
 $color-special-1: #2e1c11;
 
 $font-family-1: "Montserrat";
-$font-family-2: "Montserrat";
+$font-family-2: "Myriad Pro";
 $font-family-3: sans-serif;
 
 $color-scroll: $color-1;
@@ -796,7 +796,7 @@ table {
 
 .parag-gray{
 	p:not([class*="color"]){
-		color: #666666;
+		color: #5d5d5d;
 	}
 }
 @keyframes bodyanime{
@@ -914,7 +914,7 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	font-size: em(36);
+	font-size: em(30);
 	margin-bottom: 15px;
 	font-weight: 600;
 	line-height: 120%;
@@ -924,7 +924,7 @@ h1{
 	}
 }
 h2{
-	font-size: em(28);
+	font-size: em(26);
 	margin-bottom: 15px;
 	font-weight: 600;
 	@media (max-width: 430px) {
@@ -1004,7 +1004,7 @@ main{
 	p{
     font-style: normal;
 		position: relative;
-		line-height: 150%;
+		line-height: 180%;
 	}
 	ul:not([class]){
 		text-align: left;
@@ -1044,7 +1044,7 @@ hr{
 	line-height: 170%;
 	p{
 		margin-bottom: 15px;
-		b{
+		b:not([class*="color"]){
 			color: black;
 		}
 		@media (min-width: 1600){
