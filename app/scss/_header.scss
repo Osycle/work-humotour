@@ -13,7 +13,7 @@ $header-min-menu: 70px;
 	z-index: 110;
 	right: 0;
 	left: 0;
-	//position: fixed;
+	position: fixed;
 	pointer-events: none;
 	//font-family: $font-family-1;
 	&:not([class*="bg-color"]){
@@ -45,7 +45,7 @@ $header-min-menu: 70px;
 
 .header-hidden{
 	//position: relative;
-	height: 95px;
+	height: $header-top-height + $header-middle-height + $header-bottom-height;
 	transition: height 0.3s ease-in-out 0.4s;
 	display: block;
 	@media ( max-width: 991px ){
@@ -65,6 +65,7 @@ $header-min-menu: 70px;
 .header-top{
 	width: 100%;
 	color: $color-1;
+	background-color: white;
 }
 .header-top-content{
 	height: $header-top-height;
@@ -247,7 +248,7 @@ $header-min-menu: 70px;
 					background-image: $gradient-1;
 				}
 				.sub-menu-1{
-					transform: matrix(1,0,0,1,0,-30);
+					transform: matrix(1,0,0,1,0,0);
 					opacity: 1;
 					//visibility: visible;
 					&, li, a{
@@ -294,7 +295,7 @@ ul[class*="sub-menu"]{
 		width: 100%;
 		padding: 0 15px;
 		transition: all 0.3s ease;
-		background: linear-gradient(to left, #424958, #424958);
+		background: rgba($color-1, 0.5);
 
 		&:not(:last-child){
 			border-bottom: 1px solid rgba(black, 0.1);
@@ -311,6 +312,7 @@ ul[class*="sub-menu"]{
 			z-index: 1;
 			color: white !important;
 			display: block;
+			background: transparent !important;
 			transition: all 0.3s ease-in-out;
 			padding: 8px 0;
 			&:before, &:after{
@@ -412,9 +414,9 @@ ul[class*="sub-menu"]{
   height: $header-min-menu;
   padding: 0 25px;
 	z-index: 100;
-	color: black;
+	color: white;
 	box-shadow: 0 0 20px 0 black;
-	background-color: white;
+	background-color: black;
 	font-size: 0.9em;
 	.min-menu-logo{
 		padding: 12px 0;
@@ -435,7 +437,7 @@ ul[class*="sub-menu"]{
 		}
 	}
 	.icon-bar{
-		background-color: black;
+		background-color: white;
 	}
 }
 .mm-navbars-top{

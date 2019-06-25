@@ -47,37 +47,24 @@
 			'</span>'
 		]
 
-		{
-			var items = $(".short-partners-items.owl-carousel").attr("data-owl-item") || null
-			$(".short-partners-items.owl-carousel").owlCarousel({
-				nav: true,
-				//items: 3,
-				dots: false,
-				dotsEach: true,
-				autoplay: true,
-				touchDrag: checkSm(),
-				responsive:{
-					0:{items:2},
-					991:{items: items || 3}
-				},
-				navText : owlBtn,
-				margin: 30
-			});
-		}
+		
 
-		$(".certifications-items.owl-carousel").owlCarousel({
-			nav: true,
+		$(".short-poptours-items.owl-carousel").owlCarousel({
+			nav: !checkSm(),
 			//items: 3,
 			dots: false,
 			dotsEach: true,
 			autoplay: true,
-			touchDrag: checkSm(),
+			mouseDrag: false,
+			touchDrag: true,
+			//pullDrag: false,
+			stagePadding: 18,
 			responsive:{
 				0:{items:1},
-				991:{items:3}
+				991:{items:2}
 			},
 			navText : owlBtn,
-			margin: 15
+			margin: 22
 		});
 
 		if( $(".owl-nav-style-1").length > 0 ){
@@ -88,7 +75,7 @@
 		}
 		
 
-
+		
 
 		/*FANCYBOX*/
 		if ($("[data-fancybox]").length != 0)
