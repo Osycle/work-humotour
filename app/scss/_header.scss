@@ -101,13 +101,13 @@ $header-min-menu: 70px;
 }
 .header-middle{
 	background-image: url('../img/bg/bg-header-middle.jpg');
-	background-size: cover;
+	background-size: 100%;
 	color: white;
+	transition: all 0.3s ease;
 }
 .header-middle-content{
 	align-items: center;
 	display: flex;
-
 	height: $header-middle-height;
 }
 .header-info{
@@ -153,24 +153,23 @@ $header-min-menu: 70px;
 		transform-origin: 50% 0;
 	}
 
-	.header-top, .header-top-content, .header-logo img, .header-logo{
-		transition: all 0.5s ease; 	
+	.header-top, .header-top-content, .header-logo img, .header-logo, .header-middle-content{
+		transition: all 0.5s ease; 
+	}
+	.header-middle-content{
+		overflow: hidden;
 	}
 	&.scrolled, &.header-pages{
-		.header-top{
-			box-shadow: 0px 5px 20px -10px black;
-			background-color: $color-gray-4;
-		}
-		.header-top-content{
-			height: 80px;
-			.menu{
-				color: white;
-			}
-		}
 		.header-logo{
 			img{
 				width: 180px;
 			}
+		}
+		.header-middle-content{
+			height: 0;
+		}
+		.header-bottom{
+			box-shadow: 0px 5px 20px -10px black;
 		}
 	}
 }
