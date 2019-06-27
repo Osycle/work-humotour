@@ -73,7 +73,23 @@
 			})
 			
 		}
-		
+		$(".short-reviews-items.owl-carousel").owlCarousel({
+			nav: !checkSm(),
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: true,
+			mouseDrag: false,
+			touchDrag: true,
+			//pullDrag: false,
+			//stagePadding: 18,
+			responsive:{
+				0:{items:1},
+				991:{items:2}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
 
 		
 
@@ -280,8 +296,8 @@
 			el = $(el);
 			var text = el.text();
 			var textLimit = el.attr("data-text-limit");
-
 			if( text.length > textLimit*1 ){
+				console.log(textLimit);
 				text = text.substring(0, textLimit )
 				el.text( text+ " ..." );
 			}

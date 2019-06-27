@@ -948,6 +948,316 @@ figcaption{
 		}
 		&:hover{
 			color: $color-1;
+			text-decoration: underline;
 		}
+	}
+	@media (max-width: 991px) {
+		//display: none;
+	}
+}
+
+
+
+
+
+//flights
+.flights{
+	.table-content{
+		//max-width: 500px;
+		overflow-x: auto;
+		@media (max-width: 991px) {
+			max-width: 600px;
+		}
+		thead{
+			tr{
+				border-radius: 15px;
+			}
+			th{
+				background-color: $color-1;
+				color: white;
+				padding: 25px 10px;
+				text-align: center;
+				&:nth-child(1){
+					border-top-left-radius: 15px;
+				}
+				&:nth-last-child(1){
+					border-top-right-radius: 15px;
+				}
+
+			}
+		}
+		tbody{
+			td{
+				text-align: center;
+				padding: 12px;
+				font-weight: 600;
+				&:nth-child(odd){
+					background-color: #fffbf2;
+				}
+				&:nth-child(even){
+					background-color: #fff;
+				}
+
+			}
+		}
+	}
+}
+.tiles-accordion{
+	@extend .parag-gray;
+	h3{
+		font-weight: 600;
+		font-family: $font-family-3;
+	}
+	.panel-default{
+		//border-color: transparent;
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+	}
+	p{
+		line-height: 140%;
+		font-family: $font-family-3;
+	}
+	.panel-heading{
+		background-color: transparent;
+		padding: 0;
+		h4{
+			text-transform: none;
+			font-weight: 600;
+		}
+		.fa{
+			position: absolute;
+			right: 15px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 25px;
+			margin-top: 2px;
+		}
+		a{
+			display: block;
+			padding: 10px 15px;
+			transition: all 0.3s ease;
+			border-radius: 10px;
+			border: 1px dotted transparent;
+			background-color: lighten($color-gray-1, 5%);
+			&:not(.collapsed){
+				color: white;
+				background-color: $color-1;
+				.fa{
+					transform: translateY(-50%) rotate(90deg);
+				}
+			}
+			&:hover{
+				border: 1px dashed $color-1;
+			}
+		}
+	}
+	.panel-collapse{
+		border-radius: 0 0 10px 10px;
+		&.in{
+			box-shadow:  0 10px 25px -10px rgba(black, 0.3);
+		}
+	}
+	.panel-body, .panel-default{
+		border: none !important;
+	}
+	.panel-body{
+		padding: 10px 40px;
+	}
+}
+
+
+//contacts
+.contacts-info{
+	.fa, .icm{
+		background-color: $color-1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		font-size: 20px;
+		color: white;
+		padding: 7px;
+		width: 40px;
+		height: 40px;
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	.fa-envelope{
+		font-size: 17px;
+	}
+	big{
+		b{
+			font-weight: 700;
+		}
+	}
+	@media (max-width: 991px) {
+		.flex{
+			justify-content: center;
+		}
+		.icm{
+			display: none;
+		}
+
+	}
+}
+
+
+//summercamp
+.summercamp-items{
+	.wrapper{
+		border-radius: $border-radius-1;
+		position: relative;
+		overflow: hidden;
+		&:before{
+			@extend .clafclear;
+			background: linear-gradient(to top, black 10%, transparent 70%);
+			left: 0;
+			top: 0;
+		}
+		&:hover{
+			.cell-hide{
+				transform: scale(1);
+				opacity: 1;
+				display: block;
+			}
+		}
+	}
+	.img{
+		height: 290px;
+		background-size: cover;
+	}
+	.desc-content{
+		position: absolute;
+		bottom: 0;
+		padding: 30px 30px;
+		color: white;
+		.cell-hide{
+			display: none;
+			transition: all 0.3s ease;
+			overflow: hidden;
+			p{
+				
+				
+			}
+		}
+		h4{
+			color: $color-2;
+			font-weight: 600;
+		}
+		p{
+			transition: all 0.3s ease;
+			line-height: 150%;
+			font-family: $font-family-3;
+		}
+	}
+}
+.gallery-article-items{
+	.img{
+		width: 100%;
+		background-size: cover;
+		height: 300px;
+	}	
+	.img-content{
+		position: relative;
+		border-radius: $border-radius-1;
+		overflow: hidden;
+		&:before, &:after{
+			pointer-events: none;
+			opacity: 0;
+			transition: all 0.3s ease;
+		}
+		&:hover{
+			&:before, &:after{
+				opacity: 1;
+			}
+			&:before{
+				transform: scale(0.9);
+			}
+		}
+		&:before{
+			@extend .clafclear;
+			left: 0;
+			border-radius: $border-radius-1;
+			background: rgba($color-2, 0.6);
+			transform: scale(1.2);
+		}
+		&:after{
+			@extend .clafclear;	
+			@extend .trans-center;
+			content: "\e903";
+			width: 50px;
+			height: 50px;
+			font-size: 50px;
+			color: white;
+			font-family: "icomoon" !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+
+}
+
+.short-reviews-items{
+	.wrapper{
+		border: 1px solid #e3e3e3;
+		background-color: #f9f9f9;
+		border-radius: $border-radius-1;
+		position: relative;
+		padding: 40px 40px;
+		&:before{
+			@extend .clafclear;
+			background-image: url('../img/other/two-quotes.png');
+			width: 114px;
+			height: 100px;
+			right: 15%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+	h4{
+		color: $color-1;
+		margin: 0;
+		margin-bottom: 20px;
+		font-weight: 600;
+	}
+	p{
+		line-height: 150%;
+	}
+	.owl-btn{
+		border-radius: 10px !important;
+		background: $color-1;
+	}
+}
+
+
+//partners
+.partners-items{
+	.wrapper{
+		background-color: #efefef;
+		padding: 10px;
+		border-radius: $border-radius-1;
+	}
+	.img-content{
+		overflow: hidden;
+		border-radius: $border-radius-1;
+		box-shadow: 0 10px 40px -5px rgba(black, 0.4);
+	}
+	.img{
+		height: 140px;
+		background-size: contain;
+	}
+	.desc-content{
+		//margin-top: 30px;
+		padding: 20px;
+		font-size: em(13);
+		height: 193px;
+		overflow: hidden;
 	}
 }
