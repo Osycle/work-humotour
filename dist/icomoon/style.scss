@@ -1,0 +1,109 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?bi9raa');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?bi9raa#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?bi9raa') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?bi9raa') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?bi9raa##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icm-"], [class*=" icm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icm-compass {
+  &:before {
+    content: $icm-compass; 
+  }
+}
+.icm-facebook-logo {
+  &:before {
+    content: $icm-facebook-logo; 
+  }
+}
+.icm-hotel {
+  &:before {
+    content: $icm-hotel; 
+  }
+}
+.icm-ic-zoom-in-24px {
+  &:before {
+    content: $icm-ic-zoom-in-24px; 
+  }
+}
+.icm-instagram {
+  &:before {
+    content: $icm-instagram; 
+  }
+}
+.icm-insurance {
+  &:before {
+    content: $icm-insurance; 
+  }
+}
+.icm-left-arrow-min {
+  &:before {
+    content: $icm-left-arrow-min; 
+  }
+}
+.icm-mail-black-envelope-symbol {
+  &:before {
+    content: $icm-mail-black-envelope-symbol; 
+  }
+}
+.icm-moon {
+  &:before {
+    content: $icm-moon; 
+  }
+}
+.icm-placeholder-filled-point {
+  &:before {
+    content: $icm-placeholder-filled-point; 
+  }
+}
+.icm-route {
+  &:before {
+    content: $icm-route; 
+  }
+}
+.icm-skype-logo {
+  &:before {
+    content: $icm-skype-logo; 
+  }
+}
+.icm-sun {
+  &:before {
+    content: $icm-sun; 
+  }
+}
+.icm-telegram {
+  &:before {
+    content: $icm-telegram; 
+  }
+}
+.icm-telephone {
+  &:before {
+    content: $icm-telephone; 
+  }
+}
+.icm-viber {
+  &:before {
+    content: $icm-viber; 
+  }
+}
+

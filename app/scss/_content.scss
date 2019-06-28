@@ -1010,8 +1010,8 @@ figcaption{
 	}
 	.panel-default{
 		//border-color: transparent;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		margin-top: 15px;
+		margin-bottom: 15px;
 
 	}
 	p{
@@ -1112,7 +1112,7 @@ figcaption{
 		overflow: hidden;
 		&:before{
 			@extend .clafclear;
-			background: linear-gradient(to top, black 10%, transparent 70%);
+			background: linear-gradient(to top, black 0%, transparent 70%);
 			left: 0;
 			top: 0;
 		}
@@ -1138,6 +1138,7 @@ figcaption{
 			transition: all 0.3s ease;
 			overflow: hidden;
 			p{
+				font-size: em(13);
 				
 				
 			}
@@ -1277,11 +1278,12 @@ figcaption{
 .date-content{
 	top: 15px;
 	right: 15px;
-	border-radius: $border-radius-1;
+	border-radius: 13px;
 	position: absolute;
 	background: $gradient-1;
 	color: white;
-	padding: 4px 22px;
+	font-size: em(13);
+	padding: 4px 20px;
 	@media (max-width: 991px) {
 		//display: block;
 		//width: 100%;
@@ -1343,5 +1345,43 @@ figcaption{
 			right: auto;
 			left: 15px;
 		}
+	}
+}
+
+
+
+
+.offers{
+	.summercamp-items{
+		.img{
+			height: 260px;
+		}
+		
+	}
+}
+
+.offers-article{
+	.article-img{
+		overflow: hidden;
+		border-radius: 15px;
+	}
+}
+
+
+
+
+//sansng
+.sansng{
+	.tourism-nav .nav-content{
+		    padding: 15px 15px;	
+	}
+	.tourism-nav .scope-item{
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.btn-content{
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
